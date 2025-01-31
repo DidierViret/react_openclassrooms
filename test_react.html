@@ -20,14 +20,15 @@
 </html>
 
 <script type="text/babel">
-    // Define React components
+    // Define a Banner component
     function Header() {
-        return <h1>La maison jungle</h1>;
+        const title = "La maison jungle";
+        return (<h1>{ title.toUpperCase() }</h1>);
     }
     function Description() {
         const text = "Ici achetez toutes les plantes dont vous avez toujours rêvé";
         const emojis = "🌵🌱🎍";
-        return (<p>{ text.slice(0, 11) + emojis }</p>)
+        return (<p>{ text + emojis }</p>)
     }
     function Banner() {
         return (
@@ -38,7 +39,30 @@
         );
     }
 
+    // Define a Cart component
+    function Cart() {
+        const monsteraPrice = 8;
+        const ivyPrice = 10;
+        const flowerPrice = 15;
+        return (
+            <div>
+                <h2>Panier</h2>
+                <ul>
+                    <li>Monstera : {monsteraPrice}€</li>
+                    <li>Lierre : {ivyPrice}€</li>
+                    <li>Fleurs : {flowerPrice}€</li>
+                </ul>
+                Total : {monsteraPrice + ivyPrice + flowerPrice }€
+            </div>
+        );
+    }
+
     // Render the React app content
     const root = ReactDOM.createRoot(document.getElementById('react-app'));
-    root.render(<Banner />);
+    root.render(
+        <div>
+            <Banner />
+            <Cart />
+        </div>
+    );
 </script>
