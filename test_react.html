@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test React OpenClassrooms</title>
+
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="react-app">
+        <!-- This element's contents will be replaced by React -->
+    </div>
+</body>
+</html>
+
+<script type="text/babel">
+    // Define React components
+    function Header() {
+        return <h1>La maison jungle</h1>;
+    }
+    function Description() {
+        const text = "Ici achetez toutes les plantes dont vous avez toujours rêvé";
+        const emojis = "🌵🌱🎍";
+        return (<p>{ text.slice(0, 11) + emojis }</p>)
+    }
+    function Banner() {
+        return (
+            <div>
+                <Header />
+                <Description />
+            </div>
+        );
+    }
+
+    // Render the React app content
+    const root = ReactDOM.createRoot(document.getElementById('react-app'));
+    root.render(<Banner />);
+</script>
