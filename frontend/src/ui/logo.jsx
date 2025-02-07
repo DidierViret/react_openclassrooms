@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 const Logo = ({ className}) => {
   return (<>
-    <img className={clsx("w-48 sm:w-96", className)} src="images/logo.png" />
+    <img className={clsx("size-28 shrink-0 object-contain", className)} src="images/logo.png" alt="Logo de la maison jungle" />
   </>)
 }
 
