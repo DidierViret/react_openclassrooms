@@ -5,11 +5,9 @@ import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (<>
-      <div className="flex w-full h-full p-2 sm:p-8">
-        <div className="flex w-full h-full flex-col p-2 sm:p-8">
-          <Banner />
-          <Outlet />
-        </div>
+      <div className="flex w-full h-full flex-col pl-4 sm:pl-8 pr-4 sm:pr-8">
+        <Banner />
+        <Outlet />
       </div>
   </>)
 }
